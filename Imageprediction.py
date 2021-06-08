@@ -1,19 +1,11 @@
 from flask import Flask, request, jsonify, url_for, render_template
-import uuid
 import os
-from tensorflow.keras.models import load_model
 from werkzeug.utils import secure_filename
-from tensorflow.keras.applications import MobileNet
 from PIL import Image, ImageFile
-from io import BytesIO
-from tensorflow.keras.preprocessing import image
-from tensorflow.keras.applications.mobilenet import preprocess_input
-from tensorflow.keras.applications.mobilenet import decode_predictions
 from tensorflow.keras.applications.resnet50 import ResNet50
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.resnet50 import preprocess_input, decode_predictions
 import numpy as np
-import urllib.request
 
 
 ALLOWED_EXTENSION = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
