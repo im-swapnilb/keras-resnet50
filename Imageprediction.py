@@ -37,7 +37,7 @@ def index():
 
 
 
-@app.route('/api/image', methods=['POST'])
+@app.route('/', methods=['POST'])
 
 def upload_image():
     
