@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Image Identification</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div style="background-image: url('https://i.pinimg.com/474x/e5/b7/ca/e5b7caa003a804fe67a7bb1abd1fc1cd.jpg');">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+
+        <h1>Let's find out what you got for me ?</h1>
+        <hr>
+
+        <form action="{{ url_for('upload_image')}}" method="POST" enctype="multipart/form-data">
+
+          <div class="form-group">
+            <label>Select image</label>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" name="image" id="image">
+              
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Upload</button><br><br><br><br>
+
+        </form>
+		<div class="watermark">
+<label for="name" style="background-color:powderblue;">
+<a href="https://www.linkedin.com/in/swapnil-bandgar-a4944313a/"><B>Contact Author</B></a><br><br><br></div></lable>
+</center>
+
+      </div>
+    </div>
+    <br>
+    {{ prediction }}
+  </div>
+</body>
