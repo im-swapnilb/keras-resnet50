@@ -73,7 +73,7 @@ def upload_image():
         
         response = {'pred': result}
         os.remove(img_path)
-        return render_template('ImageML.html', prediction = 'The picture which you have uploaded can be {} with my prediction percentage {}'.format(picture_pred,probability))
+        return render_template('ImageML.html', prediction = 'My Neural Network thinks that, The picture which you have uploaded can be {} with my prediction percentage {}'.format(picture_pred,probability))
     else:
         return render_template('ImageML.html', prediction = 'Invalid File extension')
     
